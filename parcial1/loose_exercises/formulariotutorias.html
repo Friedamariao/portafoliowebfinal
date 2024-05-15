@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMER CONTATO DE TUTORIAS</title>
+</head>
+<body style="background-color: rgb(103, 121, 201); color: rgb(255, 187, 213); font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <center>
+    <h1>PRIMER CONTATO DE TUTORIAS</h1>
+    <h3>Debe ser llenado por el tutelado</h3>
+</center>
+    <form action="mailto:liliana.gamez@upslp.edu.mx;184346@upslp.edu.mx" method="post">
+        <p>Nombre: <input type="text" name="nombre" size="40"></p>
+        <p>Matrícula: <input type="number" name="matricula" min="180000"></p>
+        <p>Semestre:</p>
+        <p>
+            <input type="radio" name="semestre"  value="1"> 1
+            <input type="radio" name="semestre" value="2"> 2
+            <input type="radio" name="semestre" value="3"> 3
+            <input type="radio" name="semestre" value="4"> 4
+            <input type="radio" name="semestre" value="5"> 5
+            <input type="radio" name="semestre" value="6"> 6
+            <input type="radio" name="semestre" value="7"> 7
+            <input type="radio" name="semestre" value="8"> 8
+            <input type="radio" name="semestre" value="9"> 9
+            <input type="radio" name="semestre" value="9+"> 9+
+        </p>
+        <p>Fecha: <input type="date" name="fecha"></p>
+        <p>Materia 1: <input type="text" name="mat1" size="50"></p>
+        <p>Materia 2: <input type="text" name="mat2" size="50"></p>
+        <p>Materia 3: <input type="text" name="mat3" size="50"></p>
+        <p>Materia 4: <input type="text" name="mat4" size="50"></p>
+        <p>Materia 5: <input type="text" name="mat5" size="50"></p>
+        <p>Materia 6: <input type="text" name="mat6" size="50"></p>
+
+        <p>Calf Final Materia 1: <input type="number" name="calif1" min="0" max="10" step="0.1"></p>
+        <p>Calf Final Materia 2: <input type="number" name="calif2" min="0" max="10" step="0.1"></p>
+        <p>Calf Final Materia 3: <input type="number" name="calif3" min="0" max="10" step="0.1"></p>
+        <p>Calf Final Materia 4: <input type="number" name="calif4" min="0" max="10" step="0.1"></p>
+        <p>Calf Final Materia 5: <input type="number" name="calif5" min="0" max="10" step="0.1"></p>
+        <p>Calf Final Materia 6: <input type="number" name="calif6" min="0" max="10" step="0.1"></p>
+        
+        <p><strong>¿CUÁL FUE EL MOTIVO POR EL QUE REPROBASTE LAS MATERIAS? (SI APLICA) </strong></p>
+        <p><textarea name="motivo" cols="50" rows="10" placeholder="Escribe aquí tu motivo"></textarea></p>
+    <center>
+        <p><strong>¿CÓMO CONSIDERAS TU RENDIMIENTO EN GENERAL?</strong></p>
+            <select name="desempeño">
+                <option></option>
+                <option>Malo</option>
+                <option>Regular</option>
+                <option>Bueno</option>
+                <option>Excelente</option>
+            </select>
+    
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </center>
+    </form>
+</body>
+</html>
