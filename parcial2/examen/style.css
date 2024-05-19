@@ -1,0 +1,96 @@
+body {
+    background-color: #eee;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*ESTILOS DEL TÍTULO*/
+
+div.titulo {
+    text-align: left;
+    background-color: #57595d;
+    font-size: 55px;
+    font-weight: bold;
+    color: #eee
+}
+
+/*ESTILOS DEL MENU DE NAVEGACION*/
+nav#menu {
+    margin-right: 5px;
+    padding-bottom: 5px;
+    font-size: 1.4em;
+}
+
+nav#menu ul {
+    text-align: right;
+    list-style-type: none;
+}
+
+nav#menu ul li {
+    display: inline;
+    border: 3px #555 solid;
+    padding: 5px;
+}
+
+nav#menu ul li a:link {
+    color: #57595d;
+}
+
+nav#menu ul li a:visited {
+    color: #57595d;
+}
+
+/*ESTILOS DE LOS DIVS DE CADA HASTIAL*/
+div.hastiales {
+    color: #eee;
+    background-color: #57595d;
+    margin: 20px 0;
+    padding: 20px 70px;
+    text-align: justify;
+    font-size: 1.5em;
+    font-weight: 300;
+
+}
+
+div.hastiales h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+div.hastiales hr {
+    background-color: #eee;
+    height: 2px;
+}
+
+div.hastiales img.flecha {
+    height: 35px;
+    width: auto;
+    border: #eee 3px solid;
+    padding: 3px;
+    position:relative;
+    bottom:55px;
+}
+div.hastiales img.flecha.medio {
+    position:relative;
+    bottom:75px;
+    left:650px
+}
+
+div.hastiales img.imghastiales {
+    height: 200px;
+    width: auto;
+    border: 7px solid #57595d;
+    outline: 5px solid #eee;
+    margin-left: 20px;
+    margin-top:40px
+}
+
+div.alineacion{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    
+}
+div.izq .imghastiales {
+    margin-right: 20px;
+}

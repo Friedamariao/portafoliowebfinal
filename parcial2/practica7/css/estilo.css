@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap);
+
+h1 {
+    font-family: 'Tangerine', serif;
+    font-size: 100px;
+    text-wrap: balance;
+    text-shadow: 3px 3px 3px rgb(66, 66, 66);
+    font: effect -3d;
+    padding-right: 15px;
+    padding-top: 25px;
+    color: rgb(117, 80, 0);
+    text-align: center;
+}
+
+body {
+    background-image: url(paper.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-color: burlywood;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.35px;
+}
+
+p {
+    padding-left: 50px;
+    padding-right: 35px;
+    ;
+    text-align: justify;
+    font-size: x-large;
+}
+
+.imgmapa {
+    padding-left: 40px;
+    padding-right: 15px;
+    float: left;
+    height: 350px;
+    width: 350px;
+}
+
+.slpcentro {
+    padding-left: 15px;
+    padding-right: 40px;
+    float: right;
+    height: 350px;
+    width: 350px;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&display=swap&effect=font-effect-anaglyph');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+body {
+    background-color: rgb(110, 110, 248);
+    background-image: url(".././media/starsinthesky.jpg");
+    background-size: 100%;
+}
+
+h1 {
+    color: rgb(0, 162, 255);
+    font-family: "Madimi One", sans-serif;
+    font-size: 75px;
+    text-shadow: 5px 5px 5px rgb(147, 198, 229);
+}
+
+h2 {
+    color: rgb(6, 27, 66);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    background: #0137c1;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(19, 1, 158, 0.3);
+}
+
+img.header {
+    float: center;
+    border-radius: 15px;
+}
+
+header {
+    background-color: rgba(120, 163, 233, 0.445);
+    border-color: rgba(120, 163, 233);
+    border-radius: 20px;
+}
+
+img.tay {
+    padding: 5px;
+    width: auto;
+    height: 220px;
+    border-radius: 15px;
+}
+
+img.firma {
+    width: 350px;
+    height: auto;
+    float: center;
+}
+
+div.estrofa p {
+    font-family: "Kalam", cursive, sans-serif;
+    border-radius: 25px 1px 25px 1px;
+    border-color: solid 1px rgb(255, 236, 130);
+    color: rgb(255, 255, 255);
+    font-size: 18;
+    background-color: rgba(246, 199, 32, 0.596);
+    width: 25%;
+}
+
+div.coro p {
+    font-family: "Kalam", cursive, sans-serif;
+    border-radius: 1px 25px 1px 25px;
+    border-color: solid 1px rgb(140, 169, 255);
+    color: rgb(255, 255, 255);
+    font-size: 18;
+    background-color: rgba(68, 68, 255, 0.596);
+    width: 25%;
+}
+
+footer {
+    font-family: "Balsamiq Sans", sans-serif;
+    background-color: rgba(120, 163, 233, 0.495);
+    border-color: rgba(120, 163, 233);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
