@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lobster&family=Playpen+Sans:wght@100..800&display=swap');
+
+body {
+  padding: 0 50px;
+  background-color: hwb(38 66% 12%);
+  font-family: "Playpen Sans", cursive, sans-serif;
+  text-align: justify;
+}
+
+header {
+  background-color: rgba(140, 95, 59, 0.445);
+  border-color: rgb(125, 107, 80);
+  border-radius: 20px;
+}
+
+h1 {
+  margin: 5px;
+  padding-bottom: 1rem;
+  font-family: "Lobster", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 4px 4px 4px hwb(39 31% 53%);
+  color: hwb(39 5% 85%);
+}
+
+h2 {
+  margin: 0;
+  color: hwb(36 15% 81%);
+  font-family: "Grandstander", cursive, sans-serif;
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-shadow: 3px 3px rgb(113, 79, 52);
+}
+
+strong {
+  padding: 0 10px;
+  background-color: rgb(254, 246, 237);
+  color: rgb(107, 75, 19);
+}
+
+i {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+time {
+  color: rgb(230, 97, 2);
+}
+
+img {
+  border: hwb(30 10% 79%) 5px solid;
+  padding: 5px;
+}
+
+img.izquierda {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+img.derecha {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+p.izquierda {
+  float: left;
+  width: 33%;
+}
+
+p.centrado {
+  text-align: center;
+}
+
+hr {
+  clear: both;
+  width: 66%;
+  height: 10px;
+  border: rgb(27, 16, 2) 1px solid;
+  border-radius: 5px;
+  margin: 40px auto;
+  background-color: hwb(27 32% 44% / 0.911);
+}
+
+address {
+  text-align: right;
+  font-style: normal
+}
