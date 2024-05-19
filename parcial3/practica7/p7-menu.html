@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI MENU</title>
+    <link rel="icon" href="principal.png" type="image/png">
+    <style>
+        * {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        .menu {
+            margin: 0;
+            padding-top: 15px;
+        }
+
+        h1 {
+            height: 50px;
+            background-color: #3f9ef8;
+        }
+
+        h2 {
+            height: 30px;
+            background-color: #72b5f3;
+            padding-bottom: 10px;
+        }
+
+        .menu {
+            height: 20px;
+            background-color: #93c7f8;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        #demo a{
+            font-family: sans-serif;
+            color:#333;
+            background-color: #b2a0f3;
+            width:fit-content;
+            border-radius: 3px;
+            padding:4px;
+            box-shadow: 0 2px 5px #333;
+        }
+        div.semana{
+            margin: 0;
+            padding:20px;
+        }
+        
+        div.semana.uno{
+            background-color: #93c7f8;
+        }
+
+        div.semana.dos{
+            background-color:#b2a0f3;
+        }
+
+        div.semana.tres{
+            background-color:#eb96bd;
+        }
+        div.semana.cuatro{
+            background-color:#e9a882;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MINI MENU</h1>
+    <h2>Tercer Parcial</h2>
+    <p class="menu">Menu</p>
+    <div class="semana uno">
+        <button onclick="Ejercicio1()">Ejercicio 1</button>
+        <button onclick="Ejercicio2()">Ejercicio 2</button>
+        <button onclick="Ejercicio3()">Ejercicio 3</button>
+        <button onclick="Ejercicio4()">Ejercicio 4</button>
+        <button onclick="Ejercicio5()">Ejercicio 5</button>
+        <button onclick="Ejercicio6()">Ejercicio 6</button>
+        <button onclick="Ejercicio7()">Ejercicio 7</button>
+        <button onclick="Ejercicio8()">Ejercicio 8</button>
+        <button onclick="Ejercicio9()">Ejercicio 9</button>
+        <button onclick="Ejercicio10()">Ejercicio 10</button>
+    </div>
+    <div class="semana dos">
+        <button onclick="Ejercicio11()">Ejercicio 11</button>
+        <button onclick="Ejercicio12()">Ejercicio 12</button>
+        <button onclick="Ejercicio13()">Ejercicio 13</button>
+        <button onclick="Ejercicio14()">Ejercicio 14</button>
+        <button onclick="Ejercicio15()">Ejercicio 15</button>
+        <button onclick="Ejercicio16()">Ejercicio 16</button>
+        <button onclick="Ejercicio17()">Ejercicio 17</button>
+        <button onclick="Ejercicio18()">Ejercicio 18</button>
+        <button onclick="Ejercicio19()">Ejercicio 19</button>
+    </div>
+
+    <div class="semana tres">
+        <button onclick="Ejercicio20()">Ejercicio 20</button>
+        <button onclick="Ejercicio21()">Ejercicio 21</button>
+    </div>
+
+    <div class="semana cuatro">
+        <button onclick="Ejercicio22()">Ejercicio 22</button>
+        <button onclick="Ejercicio23()">Ejercicio 23</button>
+        <button onclick="Ejercicio24()">Ejercicio 24</button>
+        <button onclick="Ejercicio25()">Ejercicio 25</button>
+        <button onclick="Ejercicio26()">Ejercicio 26</button>
+        <button onclick="Ejercicio26()">Ejercicio 27</button>
+    </div>
+    <p id="demo"></p>
+
+    <script>
+        function Ejercicio1() {
+            document.getElementById("demo").innerHTML = "<a href='./practica1/generadordeparrafos.html'>Generador de Parrafos</a>";
+        }
+
+        function Ejercicio2() {
+            document.getElementById("demo").innerHTML = "<a href='./practica3/p3-filasycolumnas.html'>Filas y columnas</a>";
+        }
+
+        function Ejercicio3() {
+            document.getElementById("demo").innerHTML = "<a href='./practica3/p3-login.html'>Login</a>";
+        }
+
+        function Ejercicio4() {
+            document.getElementById("demo").innerHTML = "<a href='./practica3/p3-tablaconcaracter.html'>Tabla con Caracter</a>";
+        }
+
+        function Ejercicio5() {
+            document.getElementById("demo").innerHTML = "<a href='./practica3/p3-tablaconimagen.html'>Tabla con Imagen</a>";
+        }
+
+        function Ejercicio6() {
+            document.getElementById("demo").innerHTML = "<a href='./practica4/reto1-tablanumaleatorios.html'>Tabla Números Aleatorios</a>";
+        }
+
+        function Ejercicio7() {
+            document.getElementById("demo").innerHTML = "<a href='./practica4/reto2-convertir.html'>Convertidor</a>";
+        }
+
+        function Ejercicio8() {
+            document.getElementById("demo").innerHTML = "<a href='./practica5/p5-arreglo.html'>Arreglo</a>";
+        }
+
+        function Ejercicio9() {
+            document.getElementById("demo").innerHTML = "<a href='./practica6/p6-arregloentabla.html'>Arreglo en tabla y Botones</a>";
+        }
+
+        function Ejercicio10() {
+            document.getElementById("demo").innerHTML = "<a href='./practica7/p7-menu.html'>Menú</a>";
+        }
+
+        function Ejercicio11() {
+            document.getElementById("demo").innerHTML = "<a href='./practica8/p8-geolocation.html'>API Geolocation</a>";
+        }
+        function Ejercicio12() {
+            document.getElementById("demo").innerHTML = "<a href='./practica8/p8-mapagoogle.html'>API Mapa en Google</a>";
+        }
+
+        function Ejercicio13() {
+            document.getElementById("demo").innerHTML = "<a href='./practica8/p8-promptalert1.html'>Prompt y Alert</a>";
+        }
+
+        function Ejercicio14() {
+            document.getElementById("demo").innerHTML = "<a href='./practica9/p9-apigraficas.html'>API de graficas</a>";
+        }
+
+        function Ejercicio15() {
+            document.getElementById("demo").innerHTML = "<a href='./practica10/p10-apichart.html'>API de Chart</a>";
+        }
+
+        function Ejercicio16() {
+            document.getElementById("demo").innerHTML = "<a href='./practica10/p10-canvas.html'>Ejercicio de Canvas</a>";
+        }
+
+        function Ejercicio17() {
+            document.getElementById("demo").innerHTML = "<a href='./practica10/p10-graficas.html'>Graficas</a>";
+        }
+
+        function Ejercicio18() {
+            document.getElementById("demo").innerHTML = "<a href='./practica10/p10-objetocanva.html'>Monito en Canva</a>";
+        }
+
+        function Ejercicio19() {
+            document.getElementById("demo").innerHTML = "<a href='./practica11/p11-retos.html'>Reto 1 y 2</a>";
+        }
+
+        function Ejercicio20() {
+            document.getElementById("demo").innerHTML = "<a href='./practica12/p12-ahorcado.html'>Ahorcado</a>";
+        }
+
+        function Ejercicio21() {
+            document.getElementById("demo").innerHTML = "<a href='./practica13/testalumno.html'>Violencia en pareja</a>";
+        }
+        function Ejercicio22() {
+            document.getElementById("demo").innerHTML = "<a href='./practica13/testalumnoconpdf.html'>Violencia en pareja PDF</a>";
+        }
+
+        function Ejercicio23() {
+            document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdf2.html'>PDF Tablas de multiplicar</a>";
+        }
+
+        function Ejercicio24() {
+            document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdf3.html'>PDF Textos de color</a>";
+        }
+
+        function Ejercicio25() {
+            document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdf4.html'>PDF Cuadrados</a>";
+        }
+
+        function Ejercicio26() {
+            document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdfreto.html'>Reto Uno</a>";
+        }
+
+        function Ejercicio27() {
+            document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdfreto2.html'>Reto dos</a>";
+        }
+    </script>
+    
+</body>
+
+</html>

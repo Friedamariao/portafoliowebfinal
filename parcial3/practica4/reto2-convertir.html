@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function Convertir() { //Todas las funciones se declaran con function
+            var grados1 = parseInt(document.forms[0].grados.value); //con var se declaran variables, en este caso esta es local pues está dentro de la funcion
+                //parseInt convierte el dato del parametro a entero
+            var unidades = parseInt(document.forms[0].opcion.value); //con var se declaran variables, en este caso esta es local pues está dentro de la funcion
+            var resultado=0;
+            if(unidades==1)
+            {
+                resultado=grados1*1.8+32;
+                document.write(grados1," °C son ",resultado, "°F");
+            }
+
+            if(unidades==2)
+            {
+                resultado=grados1+273.15;
+                document.write(grados1," °C son ",resultado, "K");
+            }
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Convertidor de Unidades</h1>
+    <hr>
+    <form id="myform" onsubmit="return Convertir();"><!--la funcion alertName, aquí no le da ningun parámetro-->
+        <p>Grados <input id="grados" name="grados" type="text" />°</p>
+        <p>Convertir a:
+        <select name="opcion" id="opcion">
+            <option value="1">Farenheit</option>
+            <option value="2">Kelvin</option>
+        </select>
+        </p>
+        <p><input type="submit"/></p>
+    </form>
+
+    
+</body>
+</html>

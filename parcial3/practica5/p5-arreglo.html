@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5 Arreglos</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            text-align: center;
+        }
+        body{
+            margin:0;
+        }
+        h1{
+            height:50px;
+            margin:0;
+            padding-top: 15px;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <h2>Ordenación</h2>
+    <p>Click en la opcion</p>
+    <button onclick="Genera()">Genera un Arreglo</button>
+    <button onclick="Imprime()">Imprime el Arreglo</button>
+    <button onclick="Ordenar()">Ordena el Arreglo</button>
+    <button onclick="Reversa()">Invierte el Arreglo</button>
+    <p id="demo"></p>
+    <script>
+        var arreglo=[0,0,0,0,0,0];
+        var arreglo2=[0,0,0,0,0,0];
+        var arreglo3=[0,0,0,0,0,0];
+        function Genera() {
+            for(i=0;i<6;i++){
+                arreglo[i]=Math.floor(Math.random()*100+1);
+            }
+        }
+        function Imprime() {
+            document.getElementById("demo").innerHTML="Arreglo Resultante: "+arreglo;
+        }
+
+        function Ordenar(){
+            arreglo2=arreglo.sort(function(a,b){return a-b});
+            document.getElementById("demo").innerHTML="Arreglo Ordenado: "+arreglo2;
+        }
+        function Reversa(){
+            arreglo3=arreglo2.reverse();
+            document.getElementById("demo").innerHTML="Arreglo al Revés: "+arreglo3;
+        }
+    </script>
+</body>
+</html>
