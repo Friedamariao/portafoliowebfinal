@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 3er Parcial 184346 Frieda Maria Ortiz Lopez</title>
+
+    <!--Librerias para hacer uso del pdf-->
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #aa446baa;
+            color: #222;
+        }
+
+        .contenedor {
+            max-width: 500px;
+            margin: auto;
+            padding: 8px 20px;
+            border: 1px solid #802c4c;
+            border-radius: 10px;
+            background-color: #f1d7e1aa;
+            font-size: 18px;
+        }
+
+        .formulario {
+            box-shadow: 0 0 10px 3px #5d454e;
+        }
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 4px #5d454e;
+        }
+
+        h2 {
+            font-size: 27px;
+            text-align: center;
+            font-weight: 300;
+            margin: 5px;
+        }
+
+        h3 {
+            font-size: 15px;
+            text-align: center;
+            font-weight: 100;
+            margin: 3px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-left: 15px;
+
+        }
+
+        div.pdf {
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+            max-width: 515px;
+        }
+
+        .boton {
+            margin: 20px 10px 15px 210px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 0.1px solid #9f8790;
+            box-shadow: 0 0 10px 1px #4f323d;
+        }
+
+        .boton:hover {
+            box-shadow: 0 0 10px 2px #401d2a;
+        }
+
+        #contras {
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .minimos {
+            font-size: 10px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor formulario">
+        <h1>Generador de Contraseñas</h1>
+        <h2>Examen Practico Tercer Parcial</h2>
+        <h3>Frieda María Ortiz López <br> 184346</h3>
+        <hr>
+        <form onsubmit="return password();" id="passwordForm">
+            <label>Longitud de la contraseña <span class="minimos">(mínimo 8)</span>
+                <input type="number" name="length" id="length" min="8" max="15" required>
+            </label>
+            <label>Letras minúsculas
+                <input type="radio" name="min" id="min">
+            </label>
+            <label>Letras mayúsculas
+                <input type="radio" name="may" id="may">
+            </label>
+            <label>Números
+                <input type="radio" name="nums" id="nums">
+            </label>
+            <label>Caracteres Especiales
+                <input type="radio" name="especiales" id="especiales">
+            </label>
+            <label>Cantidad de contraseñas <span class="minimos">(mínimo 1)</span>
+                <input type="number" name="cant" id="cant" min="1" max="10" required>
+            </label>
+            <input type="submit" value="Generar" class="boton">
+        </form>
+    </div>
+    <div class="contenedor" id="contras"></div>
+    <div class="pdf"><iframe frameborder="0" width="500" height="400"></iframe></div>
+    <script>
+        function password() {
+            // Declaración de variables
+            let length, cant, min, may, nums, especiales;
+            let i, j;
+            let requeridos = ""; // Aquí se irán guardando los caracteres que seleccione el usuario en el formulario
+            let pass = ""; // Variable en la que se almacenará una sola contraseña generada
+            let contrasenas = ""; // Variable para guardar todas las contraseñas generadas y poderlas imprimir en un div
+            let contrasenaspdf = "";
+            //variables que contienen a los caracteres que se usaran
+            let numero = "01234567890123456789";
+            let car_esp = "-=/&()%$#!'^{}[]+¡¿?._";
+            let minusc = "abcdefghijklmnopqrstuvwxyz";
+            let mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const printindiv = document.getElementById('contras'); //contras es el id del div en el que se va a imprmir todas las contraseñas, es para que se pueda imprimir en la misma pantalla y no en una por fuera
+
+            // Tomo las características del formulario que llenó el usuario
+            min = document.getElementById('min');
+            may = document.getElementById('may');
+            nums = document.getElementById('nums');
+            especiales = document.getElementById('especiales');
+            length = parseInt(document.getElementById('length').value);
+            cant = parseInt(document.getElementById('cant').value);
+
+            // Si ninguno de los campos es seleccionado, entonces se mostrará un alert, para que el usuario seleccione al menos una opción.
+            if (!nums.checked && !especiales.checked && !min.checked && !may.checked) {
+                alert("Por favor selecciona al menos una opción para generar tu contraseña");
+            } else {
+                // Este else, contiene ifs que van agregando a la variable de requeridos los caracteres que el usuario quiere que tenga su contraseña
+                if (min.checked) { requeridos += minusc; }
+                if (may.checked) { requeridos += mayus; }
+                if (nums.checked) { requeridos += numero; }
+                if (especiales.checked) { requeridos += car_esp; }
+
+                for (i = 0; i < cant; i++)//for exterior para la cantidad de contraseñas que pidió el usuario
+                {
+                    pass = "";
+                    for (j = 0; j < length; j++) //for interior para que se repita la seleccion aleatoria de caracteres
+                    {
+                        // Cada que se itera el ciclo de las j, se selecciona un caracter aleatorio, de los seleccionados
+                        // guardados en la variable de requeridos pues son los unicos que pide el usurio
+                        pass += requeridos[Math.floor(Math.random() * requeridos.length)];
+                    }
+                    //despues del for j, se van a ir guardando todas las contraseñas en la variable de contrasenas para que se pueda imprimir esa variable que las contenga a todas, se dividen con un <hr> por puro estilo propio, pudo haber sido un <br>
+                    contrasenas += pass + "<hr>"
+                    //también se guarda en contrasenas pdf pero con una secuencia de escape de salto de linea para que se use en la funcion del pdf
+                    contrasenaspdf += pass + '\n\n';
+                }
+                printindiv.innerHTML = "<h2>Contraseñas</h2><br>" + contrasenas; // Asignar todas las contraseñas en el div que se va a impimir
+                //Genera el pdf
+                $(document).ready(function () {
+                    var doc = new jsPDF(); //constructor, prepara un objeto y le da un espacio en memoria
+                    doc.setTextColor(170, 68, 107);//cambio de color para el texto
+                    doc.setFontSize(35); // puntos por pulgada 
+                    doc.text(70, 30, 'Contraseñas');
+
+                    doc.setFontSize(22);
+                    doc.setTextColor(100);
+                    doc.text(20, 50, contrasenaspdf);
+                    var string = doc.output('datauristring');
+                    $('iframe').attr('src', string);
+                });
+            }
+
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
