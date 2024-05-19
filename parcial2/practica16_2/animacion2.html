@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .uno{
+            width: 150px;
+            height: 150px;
+            background-image: url(snoopy.png);
+            background-size: cover;
+            position: relative;
+            animation-name: snoopy;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes snoopy {
+            0% {
+                background-image: url(snoopy.png);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-image: url(snoopy.png);
+                background-size: cover;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-image: url(snoopy.png);
+                background-size: cover;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-image: url(snoopy.png);
+                background-size: cover;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-image: url(snoopy.png);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .dos{
+            width: 104px;
+            height: 200px;
+            background-image: url(charlie.png);
+            background-size: cover;
+            position: relative;
+            animation-name: charlie;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction:alternate-reverse;
+        }
+        @keyframes charlie {
+            0% {
+                background-image: url(charlie.png);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-image: url(charlie.png);
+                background-size: cover;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-image: url(charlie.png);
+                background-size: cover;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-image: url(charlie.png);
+                background-size: cover;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-image: url(charlie.png);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animation</h1>
+    <p>The animation-direction property specifies whether an animation should be played forwards, backwards or in
+        alternate cycles. The followingexample uses the value "alternate-reverse" to make the animation run backwards
+        first, then forwards:</p>
+    <div class="uno"></div>
+    <div class="dos"></div>
+
+</body>
+
+</html>

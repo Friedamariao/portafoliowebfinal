@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .wonwoo {
+            width: 100px;
+            height: 100px;
+            background-image: url(wonwoo.jpeg);
+            background-size: cover;
+            
+            position: relative;
+            animation-name: example;
+            animation-duration: 8s;
+            animation-delay: 4s;
+            /*animation: example 1s linear infinite;*/
+        }
+
+        /*En cada keyframe podemos asignar una transformación*/
+        /*El efecto de los colores es automático*/
+        @keyframes example {
+
+            /*from{
+                transform: rotate(0deg);
+            }
+
+            to{
+                transform: rotate(360deg);
+            }*/
+
+            0% {
+                background-image: url(wonwoo.jpeg);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+                transform:rotateY(180deg);
+            }
+
+            25% {
+                background-image: url(wonwoo.jpeg);
+                background-size: cover;
+                left: 200px;
+                top: 0px;
+                transform:rotateX(360deg);
+            }
+
+            50% {
+                background-image: url(wonwoo.jpeg);
+                background-size: cover;
+                left: 200px;
+                top: 200px;
+                transform:rotateY(180deg);
+            }
+
+            75% {
+                background-image: url(wonwoo.jpeg);
+                background-size: cover;
+                left: 0px;
+                top: 200px;
+                transform:rotateX(360deg);
+            }
+
+            100% {
+                background-image: url(wonwoo.jpeg);
+                background-size: cover;
+                left: 0px;
+                top: 0px;
+                transform:rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animation</h1>
+    <p>The animation-delay property specifies a delay for the start of an animation. The following example has a 2
+        seconds delay before startingthe animation:</p>
+    <div class="wonwoo"></div>
+</body>
+
+</html>
