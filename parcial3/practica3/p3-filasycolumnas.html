@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Bienvenida del usuario</title>
+    <script type="text/javascript">
+        function alertName() { //Todas las funciones se declaran con function
+            var columnas = parseInt(document.forms[0].columnas.value); //con var se declaran variables, en este caso esta es local pues está dentro de la funcion
+            var filas = parseInt(document.forms[0].filas.value); //con var se declaran variables, en este caso esta es local pues está dentro de la funcion
+           //parseInt convierte el dato del parametro a entero
+            document.write("<table border=1>");
+            for (i = 1; i <= filas; i++)
+            {
+                document.write("<tr>");
+                for(j=1;j<=columnas;j++)
+                {
+                    document.write("<td>Hola</td>"); //document.write es para escribir loq ue esta entre parentesis. 
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+            return true;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="myform" onsubmit="return alertName();"><!--la funcion alertName, aquí no le da ningun parámetro-->
+        <p>Cuantas filas <input id="filas" name="filas" type="text" /></p>
+        <p>Cuantas columnas <input id="columnas" name="columnas" type="text" /></p>
+        <p><input type="submit"/></p>
+    </form>
+
+    
+</body>
+</html>

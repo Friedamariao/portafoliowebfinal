@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida del usuario. Login</title>
+    <script type="text/javascript">
+        function validar() { //Todas las funciones se declaran con function
+            var user1 = document.forms[0].user.value;
+            var pass1 = document.forms[0].pass.value;
+
+            if (user1 == "admin" && pass1 == "admin") {
+                document.write("<p>Acceso Permitido</p>");
+                document.write("<a href=https://portafoliowebfmol.000webhostapp.com/>Portafolio</a>");
+            }
+            else {
+                document.write("<p>Acceso denegado</p>");
+                document.write("<a href=p3-login.html>Login</a>");
+            }
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="myform" onsubmit="return validar();"><!--la funcion alertName, aquí no le da ningun parámetro-->
+        <p>Usuario<input id="user" name="user" type="text" /></p>
+        <p>Contraseña <input id="pass" name="pass" type="password" /></p>
+        <p><input type="submit" /></p>
+    </form>
+
+
+</body>
+
+</html>
