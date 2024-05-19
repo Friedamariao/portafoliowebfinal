@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+        const xValues = ["CNG II", "MATE I", "FISICA I", "CNO I", "PROGRA I"];
+        let calif_cng3=Math.floor(7.5+Math.random()*2+1);
+        let calif_mate3=Math.floor(7.5+Math.random()*2+1);
+        let calif_fis3=Math.floor(7.5+Math.random()*2+1);
+        let calif_cno3=Math.floor(7.5+Math.random()*2+1);
+        let calif_prog3=Math.floor(7.5+Math.random()*2+1);
+        const yValues = [calif_cng3, calif_mate3, calif_fis3, calif_cno3, calif_prog3,0];
+        const barColors = ["#48c", "#a9e", "#e9c", "#fc9", "#fd9"];
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "CALIFICACIONES"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+    <script>
+        const xArray = ["CNG II", "MATE I", "FISICA I", "CNO I", "PROGRA I"];
+        let calif_cng1=10;
+        let calif_mate1=10;
+        let calif_fis1=6;
+        let calif_cno1=10;
+        let calif_prog1=9.5;
+
+        const yArray = [calif_cng1, calif_mate1, calif_fis1, calif_cno1, calif_prog1];
+        const data = [{
+            x: xArray,
+            y: yArray,
+            type: "bar",
+            orientation: "v",
+            marker: {color: "rgba(227, 118, 174, 0.8)"} 
+        }];
+        const layout = { title: "Rendimiento Primer Parcial" };
+        Plotly.newPlot("myPlot", data, layout);
+    </script>
+
+    <div id="myPlot1" style="width:100%;max-width:700px"></div>
+    <script>
+        const xArray1 = ["CNG II", "MATE I", "FISICA I", "CNO I", "PROGRA I"];
+        let calif_cng2=10;
+        let calif_mate2=10;
+        let calif_fis2=8;
+        let calif_cno2=10;
+        let calif_prog2=8.5;
+
+        const yArray1 = [calif_cng2, calif_mate2, calif_fis2, calif_cno2, calif_prog2];
+        const data1 = [{
+            x: xArray1,
+            y: yArray1,
+            type: "bar",
+            orientation: "v",
+            marker: {color: "rgba(245, 140, 91, 0.8)"} 
+        }];
+        const layout1 = { title: "Rendimiento Segundo Parcial" };
+        Plotly.newPlot("myPlot1", data1, layout1);
+    </script>
+
+<div id="myPlot2" style="width:100%;max-width:700px"></div>
+<script>
+    const xArray2 = ["CNG II", "MATE I", "FISICA I", "CNO I", "PROGRA I"];
+    let calif_cng3=Math.floor(7.5+Math.random()*2+1);
+    let calif_mate3=Math.floor(7.5+Math.random()*2+1);
+    let calif_fis3=Math.floor(7.5+Math.random()*2+1);
+    let calif_cno3=Math.floor(7.5+Math.random()*2+1);
+    let calif_prog3=Math.floor(7.5+Math.random()*2+1);
+    const yArray2 = [calif_cng3, calif_mate3, calif_fis3, calif_cno3, calif_prog3];
+    const data2 = [{
+        x: xArray2,
+        y: yArray2,
+        type: "bar",
+        orientation: "v",
+        marker: {color: "rgba(175, 156, 230, 0.8)"} 
+    }];
+    const layout2 = { title: "Predicción Rendimiento Tercer Parcial" };
+    Plotly.newPlot("myPlot2", data2, layout2);
+</script>
+</body>
+    
+</html>
