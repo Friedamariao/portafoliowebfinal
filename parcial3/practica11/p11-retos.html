@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        div {
+            padding: 10px 15px;
+        }
+
+        div#titulos {
+            background-color: cadetblue;
+            margin: 0;
+            padding: 10px;
+            text-align: right;
+        }
+
+        #titulos h1 {
+            letter-spacing: 5px
+        }
+
+        #titulos h2 {
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        li {
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+    <div id="titulos">
+        <h1>Gráficas</h1>
+        <h2>Frieda María Ortiz López</h2>
+    </div>
+    <div>
+        <p>Ingresa el inicio y el fin de la función que desees graficar.</p>
+        <ul>
+            <li> Recuerda que el inicio y el fin no pueden ser el mismo. </li>
+            <li>El inicio debe ser menor que el valor final</li>
+        </ul>
+
+        <form id="myform" onsubmit="return graficas();">
+            <p>Inicio:<input id="inicio" name="inicio" type="text" /></p>
+            <p>Fin: <input id="fin" name="fin" type="text" /></p>
+            <select name="funcion" id="funcion">
+                <option value="Math.sin(x)">Seno</option>
+                <option value="Math.cos(x)">Coseno</option>
+                <option value="Math.tan(x)">Tangente</option>
+                <option value="Math.tanh(x)">Cotangente</option>
+            </select>
+            <p><input type="submit"></p>
+        </form>
+        <center>
+            <div id="myPlot" style="width:100%;max-width:700px"></div>
+        </center>
+    </div>
+    <script>
+        function graficas() {
+
+            var inicio1 = parseInt(document.forms[0].inicio.value);
+            var fin1 = parseInt(document.forms[0].fin.value);
+            //Validación de datos
+            if (inicio1 != fin1 && inicio1 < fin1) {
+                let exp = (document.forms[0].funcion.value);
+                // Generate values
+                const xValues = [];
+                const yValues = [];
+                for (let x = inicio1; x <= fin1; x += 0.1) {
+                    xValues.push(x);
+                    yValues.push(eval(exp));
+                }
+                // Display using Plotly
+                const data = [{ x: xValues, y: yValues, mode: "lines" }];
+                const layout = { title: "y = " + exp };
+                Plotly.newPlot("myPlot", data, layout);
+                return false;
+            }
+            //Sentencia si no se cumple los requisitos
+            else {
+                document.write("Ingresa datos Válidos");
+            }
+        }
+    </script>
+</body>
+
+</html>
