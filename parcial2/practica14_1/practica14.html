@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Caja</title>
+    <style>
+        .primero p{
+            background-color: rgb(255, 247, 170);
+            height: 30px;
+            font-size: 23px;
+            text-align: center;
+        }
+        .primero p+p{
+            background-color: rgb(212, 186, 106);
+            height: 30px;
+            font-size: 23px;
+            text-align:end;
+            padding-right: 5px;
+        }
+        .primero{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 1px;
+            margin:2px;
+            border: 2px solid rgb(253, 115, 0);
+        }
+        .segundo{
+            border: 2px solid rgb(57, 20, 174);
+            margin:2px;
+            padding: 5px;
+        }
+        .segundo p{
+            background-color: rgb(140, 124, 135);
+            height: 30px;
+            font-size: 23px;
+            text-align: center;
+        }
+        .segundo p+p{
+            background-color: rgb(143, 120, 173);
+            height: 30px;
+            font-size: 23px;
+            text-align:end;
+            padding-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <div class="primero">
+        <p>
+            Si Algo podría salir mal, saldra mal
+        </p>
+        <p>
+            Ley de Murphy
+        </p>
+
+    </div>
+    <br>
+    <div class="segundo">
+        <p>
+            Murphy era un optimista
+        </p>
+        <p class="abajo_dos">
+            Comentario de O'toole
+        </p>
+    </center>
+    </div>
+</body>
+</html>
