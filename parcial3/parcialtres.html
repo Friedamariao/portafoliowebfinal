@@ -65,8 +65,13 @@
         div.semana.tres{
             background-color:#eb96bd;
         }
+        
         div.semana.cuatro{
             background-color:#e9a882;
+        }
+
+        div.semana.cinco{
+            background-color:#d3e982;
         }
     </style>
 </head>
@@ -113,12 +118,18 @@
         <button onclick="Ejercicio26()">Ejercicio 26</button>
         <button onclick="Ejercicio27()">Ejercicio 27</button>
     </div>
+
+    <div class="semana cinco">
+        <button onclick="Examen()">Examen Parcial Tres</button>
+    </div>
+    
     <p id="demo"></p>
 
     <script>
         function Ejercicio1() {
-            document.getElementById("demo").innerHTML = "<a href='./practica1/generadordeparrafos.html'>Generador de Parrafos</a>";
+            document.getElementById("demo").innerHTML = "<a href='./Practica1/generadordeparrafos.html'>Generador de Parrafos</a>";
         }
+        
 
         function Ejercicio2() {
             document.getElementById("demo").innerHTML = "<a href='./practica3/p3-filasycolumnas.html'>Filas y columnas</a>";
@@ -220,6 +231,10 @@
 
         function Ejercicio27() {
             document.getElementById("demo").innerHTML = "<a href='./practica14/ejerciciopdfreto2.html'>Reto Dos</a>";
+        }
+
+        function Examen() {
+            document.getElementById("demo").innerHTML = "<a href='./examen/184346_3P_Examen.html'>Examen Parcial 3</a>";
         }
     </script>
     
